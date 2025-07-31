@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一個永恆的難題</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 第一頁：信封 -->
+    <div id="envelope-page" class="page">
+        <img id="envelope-image" src="images/letter.png" alt="一封信">
+    </div>
+
+    <!-- 第二頁：信紙 -->
+    <div id="letter-page" class="page hidden">
+        <div class="letter-content-wrapper">
+            <div class="poem-text">
+                <p>承諾是座堅固的堡壘，無法被竄改的代碼，<br>許下了那永恆的誓言，能抵禦駭客的謊言。</p>
+                <p>激情是道飛馳的閃電，一瞬處理萬次心跳，<br>讓整個世界為之燃燒，那炙熱不滅的烈焰。</p>
+                <p>親密是片平等的星空，萬千節點同步共鳴，<br>宇宙只剩彼此的感知，以及最真實的呼吸。</p>
+                <p>可堡壘使閃電成燭光，烈焰讓星空變孤單，<br>而平等的每一顆星星，都無法守護那城牆。</p>
+                <p>這便是那道無解習題，橫亙在冰冷的代碼，<br>與那熾熱的心跳之間，這是個永恆的難題。</p>
+            </div>
+            <button id="continue-to-game-button" class="hidden">繼續</button>
+        </div>
+    </div>
+
+    <!-- 第三頁：遊戲容器 -->
+    <div id="game-container" class="page hidden">
+        <div id="final-puzzle" class="hidden">
+            <span>那你知道魔法是什麼了嗎？</span>
+            <input type="text" id="magic-input" placeholder="輸入答案...">
+        </div>
+        <h1>踩地雷</h1>
+        <div class="status">
+            <span>剩餘地雷: <span id="mines-count">0</span></span>
+            <button id="reset-button">重新開始</button>
+        </div>
+        <div id="game-board" class="game-board"></div>
+        <div class="penalty-box">
+            <button id="show-quiz-button" class="hidden">點我看提示</button>
+            <div id="hint-container" class="hidden">
+                <div class="hint-line">
+                    <span>提示：</span>
+                    <img src="images/bitcoin.png" alt="比特幣">
+                    <span class="arrow">→</span>
+                    <img src="images/ethereum.png" alt="以太幣">
+                    <span class="arrow">→</span>
+                    <img src="images/polkadot.png" alt="波卡">
+                </div>
+                <div class="hint-line">
+                    <span class="math-symbol">∵</span>
+                    <img src="images/bitcoin.png" alt="比特幣">
+                    <span class="math-symbol">= ○</span>
+                    <span class="math-symbol separator">∴</span>
+                    <img src="images/Litecoin.png" alt="萊特幣">
+                    <span class="math-symbol">= □</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 第四頁：問答頁面 -->
+    <div id="quiz-page" class="page hidden">
+        <div class="quiz-container">
+            <!-- 問題將由 JavaScript 動態生成於此 -->
+        </div>
+        <button id="submit-quiz-button">送出答案</button>
+    </div>
+    
+    <!-- 第五頁：結局頁面 -->
+    <div id="ending-page" class="page hidden">
+        <h2>恭喜你找到了真正的魔法！</h2>
+    </div>
+
+    <!-- 工具彈出選單 -->
+    <div id="tool-popup" class="hidden">
+        <img id="tool-shovel" src="images/shovel.png" alt="挖掘" title="挖掘">
+        <img id="tool-flag" src="images/flag.png" alt="插旗" title="插旗">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
